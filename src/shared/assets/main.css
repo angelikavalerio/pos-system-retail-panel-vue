@@ -1,35 +1,27 @@
 @import './base.css';
+@import './variables.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
+a, a:link {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  color: var(--color-text-primary);
+  cursor: pointer;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+button {
+  cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+button.icon-button {
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: none;
+
+  &:hover {
+    background-color: var(--background-hover-button-feedback);
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  &:active {
+    background-color: var(--background-active-button-feedback);
   }
 }
