@@ -8,7 +8,7 @@ import { useMediaQuery, usePreferredDark } from '@vueuse/core';
 const isProfileMenuShown: Ref<Boolean> = ref(false)
 const isConfigMenuShown: Ref<Boolean> = ref(false)
 const isDarkMode: Ref<Boolean> = ref(usePreferredDark())
-const isMobile = useMediaQuery("(max-width: 720px)")
+const isMobile = useMediaQuery("(max-width: 800px)")
 
 function toggleDarkMode() {
   isDarkMode.value = !isDarkMode.value
@@ -66,7 +66,7 @@ onUnmounted(() => {
       </div>
     </div>
     <div class="profile">
-      <img src="@/shared/assets/user_icon.jpg" class="user-icon" alt="Logo">
+      <img src="@/shared/assets/images/user_icon.jpg" class="user-icon" alt="Logo">
       <div class="profile-details">
         <p><strong>Jane Doe</strong></p>
         <p>Administrator</p>
@@ -90,7 +90,6 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding-inline: 2rem;
   height: 8rem;
 
   div.site-name {
@@ -98,10 +97,8 @@ header {
 
     h1 {
       color: var(--color-heading-primary);
-      font-weight: 400;
     }
   }
-
 
   div:not(.site-name) {
     display: flex;
@@ -152,7 +149,7 @@ menu.topbar-menu {
   li {
 
     &:hover {
-      background-color: var(--color-primary);
+      background-color: var(--primary);
     }
 
     &:hover a {
@@ -166,36 +163,7 @@ menu.topbar-menu {
   }
 }
 
-@media only screen and (max-width: 788px) {
-  header {
-
-    div.site-name {
-      flex-shrink: 1;
-
-      h1 {
-        font-size: 2rem;
-        overflow: hidden;
-        /* Hide any overflow */
-        text-overflow: ellipsis;
-        /* Add ellipsis when text overflows */
-        white-space: nowrap;
-      }
-
-    }
-
-    div.profile {
-      flex-shrink: 0;
-      /* Prevent this child from shrinking */
-      flex-grow: 0;
-      /* Prevent this child from growing */
-      width: auto;
-      /* Allow this child to maintain its own width */
-    }
-
-  }
-}
-
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   header {
     gap: 1rem;
 

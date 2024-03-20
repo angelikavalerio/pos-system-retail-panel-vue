@@ -8,7 +8,12 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Authentication: typeof import('./src/Authentication/index.vue')['default']
+    ButtonComponent: typeof import('./src/shared/components/ButtonComponent.vue')['default']
+    CustomButton: typeof import('./src/shared/components/CustomButton.vue')['default']
+    Dashboard: typeof import('./src/Dashboard/index.vue')['default']
+    DataTable: typeof import('./src/shared/components/DataTable.vue')['default']
     FontAwesomeIcon: typeof import('@fortawesome/vue-fontawesome')['FontAwesomeIcon']
+    ProductManagement: typeof import('./src/ProductManagement/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./src/shared/layout/SideBar.vue')['default']

@@ -15,6 +15,7 @@
 
 .main {
   width: 100%;
+  padding-inline: 2rem;
   border-left: 1px solid var(--border-color);
 }
 </style>

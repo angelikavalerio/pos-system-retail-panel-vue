@@ -1,9 +1,17 @@
 @import './base.css';
 @import './variables.css';
 
+.mt-md {
+  margin-top: 2.4rem !important;
+}
+
+.mt-sm {
+  margin-top: 1.8rem !important;
+}
+
 a, a:link {
   text-decoration: none;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   cursor: pointer;
 }
 
@@ -14,7 +22,7 @@ button {
 button.icon-button {
   border-radius: 50%;
   background-color: transparent;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   border: none;
 
   &:hover {

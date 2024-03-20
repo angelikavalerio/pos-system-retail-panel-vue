@@ -14,7 +14,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--background-primary);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   transition: all .1s ease-in;
   line-height: 1.6;
   font-family:
