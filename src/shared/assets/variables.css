@@ -20,6 +20,7 @@ body.dark {
   --primary: rgb(93, 0, 255);
   --background-hover-button-primary: rgb(76, 0, 206);
   --color-nav-button: rgb(193, 193, 193);
+  --color-nav-button-hover: rgb(241, 241, 241);
   --background-primary: rgb(29, 29, 29);
   --background-secondary: rgb(23, 23, 23);
   --background-hover-button-feedback: rgba(230, 230, 230, 0.053);
