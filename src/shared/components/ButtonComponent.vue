@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 type ButtonTypeAttribute = 'submit' | 'reset' | 'button';
 
@@ -11,13 +10,19 @@ defineProps({
   label: {
     type: String,
     default: "Submit"
+  },
+  plain: {
+    type: Boolean,
+    default: false
   }
 })
 
+defineEmits(['onClick'])
+
 </script>
 <template>
-  <button class="button" :type="type">
-    <font-awesome-icon icon="fa-solid fa-plus" style="margin-right: 8px;" />
+  <button class="button" :type="type" :class="{ plain: plain }" @click="$emit('onClick')">
+    <slot name="icon" />
     <span>{{ label }}</span>
   </button>
 </template>
@@ -31,6 +36,10 @@ button.button {
   color: var(--color-button-primary);
   transition: all .1s;
 
+  svg {
+    margin-right: 8px;
+  }
+
   &:hover {
     background-color: var(--background-hover-button-primary)
   }
@@ -38,6 +47,11 @@ button.button {
   &:active {
     transform: scale(.9);
   }
+}
+
+button.button.plain {
+  background-color: var(--primary-button-plain);
+  color: var(--color-button-plain);
 
 }
 </style>

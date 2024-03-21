@@ -27,11 +27,11 @@ function closeMenuOnOutsideClick(event: Event) {
 
   const el = event.target as HTMLButtonElement
 
-  if ((profileMenuBtn && !profileMenuBtn.contains(el))) {
+  if (profileMenuBtn && !profileMenuBtn.contains(el)) {
     isProfileMenuShown.value = false
   }
 
-  if ((configMenuBtn && !configMenuBtn.contains(el))) {
+  if (configMenuBtn && !configMenuBtn.contains(el)) {
     isConfigMenuShown.value = false
   }
 }
@@ -84,8 +84,6 @@ onUnmounted(() => {
 </template>
 
 <style lang="css">
-@import '@/shared/assets/variables.css';
-
 header {
   display: flex;
   align-items: center;

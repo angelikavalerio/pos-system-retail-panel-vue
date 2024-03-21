@@ -7,7 +7,7 @@
 </template>
 
 <style>
-@import '@/shared/assets/variables.css';
+@import '@/shared/assets/css/variables.css';
 
 #app {
   display: flex;

@@ -3,9 +3,12 @@ body.light {
   --color-heading-primary: rgb(31, 31, 31);
   --primary: rgb(32, 13, 66);
   --background-hover-button-primary: rgb(40, 0, 108);
+  --primary-button-plain: rgb(242, 242, 242);
+  --background-hover-button-plain: rgb(197, 197, 197);
   --color-nav-button: rgb(64, 64, 64);
   --color-nav-button-hover: rgb(241, 241, 241);
   --color-button-primary: rgb(225, 225, 225);
+  --color-button-plain: rgb(45, 45, 45);
   --background-primary: rgb(242, 242, 242);
   --background-secondary: rgb(234, 234, 234);
   --background-hover-button-feedback: rgba(0, 0, 0, 0.053);
@@ -19,6 +22,8 @@ body.dark {
   --color-heading-primary: rgb(239, 239, 239);
   --primary: rgb(93, 0, 255);
   --background-hover-button-primary: rgb(76, 0, 206);
+  --primary-button-plain: rgb(29, 29, 29);
+  --background-hover-button-plain: rgb(40, 40, 40);
   --color-nav-button: rgb(193, 193, 193);
   --color-nav-button-hover: rgb(241, 241, 241);
   --background-primary: rgb(29, 29, 29);

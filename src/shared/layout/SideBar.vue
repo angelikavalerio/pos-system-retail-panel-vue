@@ -47,7 +47,7 @@ const navigationItems: NavigationItem[] = [
 
 </script>
 <template>
-  <nav :class="{ collapsed: isNavBarCollapsed || isMobile }">
+  <nav :class="[{ collapsed: isNavBarCollapsed || isMobile }, 'sidebar']">
     <div class="nav-toggle">
       <p>Vendor Name</p>
       <button type="button" class="nav-toggle-btn icon-button" @click="isNavBarCollapsed = !isNavBarCollapsed">
@@ -55,8 +55,8 @@ const navigationItems: NavigationItem[] = [
       </button>
     </div>
     <ul>
-      <li v-for="(nav, index) in navigationItems" :key="index" :class="{ selected: currentTab === nav.path }"
-        @click="currentTab = nav.path">
+      <li v-for="(   nav, index   ) in    navigationItems   " :key="index"
+        :class="{ selected: currentTab === nav.path }" @click="currentTab = nav.path">
         <router-link :to="nav.path">
           <font-awesome-icon :icon="nav.icon" class="nav-icon" />
           <span>{{ nav.name }}</span>
@@ -67,9 +67,7 @@ const navigationItems: NavigationItem[] = [
 </template>
 
 <style>
-@import '@/shared/assets/variables.css';
-
-nav {
+nav.sidebar {
   width: 30.5rem;
   height: 100svh;
   padding-block: 1rem;
@@ -173,7 +171,7 @@ nav.collapsed {
 
 @media only screen and (max-width: 800px) {
   nav.collapsed {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 6rem;
     width: calc(100% - 4rem);

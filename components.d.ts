@@ -13,6 +13,7 @@ declare module 'vue' {
     Dashboard: typeof import('./src/Dashboard/index.vue')['default']
     DataTable: typeof import('./src/shared/components/DataTable.vue')['default']
     FontAwesomeIcon: typeof import('@fortawesome/vue-fontawesome')['FontAwesomeIcon']
+    Pagination: typeof import('./src/shared/components/Pagination.vue')['default']
     ProductManagement: typeof import('./src/ProductManagement/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

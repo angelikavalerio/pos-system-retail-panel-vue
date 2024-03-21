@@ -9,6 +9,10 @@
   margin-top: 1.8rem !important;
 }
 
+.mt-xs {
+  margin-top: 1.2rem !important;
+}
+
 a, a:link {
   text-decoration: none;
   color: var(--color-text);
